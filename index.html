@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="Assets/Img/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="description"
+      content="Discover more about me, through my links page, made by my own, with a modern and innovative design!"
+    />
+
+    <!-- Open Graph (Facebook, LinkedIn, WhatsApp etc) -->
+    <meta property="og:title" content="links page | Cauê Souza" />
+    <meta
+      property="og:description"
+      content="Discover more about me, through my links page, made by my own, with a modern and innovative design!"
+    />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/souzzaParabolica/linksPage/main/Assets/Img/logo.png"
+    />
+
+    <meta
+      property="og:url"
+      content="https://souzzaparabolica.github.io/linksPage"
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="links page | Cauê Souza" />
+    <meta
+      name="twitter:description"
+      content="Discover more about me, through my links page, made by my own, with a modern and innovative design!"
+    />
+    <meta
+      name="twitter:image"
+      content="https://raw.githubusercontent.com/souzzaParabolica/linksPage/main/Assets/Img/logo.png"
+    />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- GSAP Core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <!-- GSAP ScrollTrigger Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Página de Links</title>
+  </head>
+  <body class="bg-[#151515]">
+    <header
+      class="fixed flex justify-between items-center z-10 2xl:px-[100px] px-8 py-8 2xl:py-12 w-full"
+    >
+      <img
+        class="w-[15%] 2xl:w-[5%]"
+        src="Assets/Img/скрипт-removebg-preview.png"
+        alt=""
+      />
+      <button
+        id="menu-btn"
+        class="xl:hidden absolute right-6 top-8 z-50 text-black"
+      >
+        <span data-lucide="menu" class="w-8 h-8 text-black block"></span>
+      </button>
+      <nav class="hidden xl:flex justify-center items-center">
+        <ul class="flex justify-center items-center gap-12">
+          <li
+            class="cursor-pointer text-white/90 2xl:text-lg font-light border-b-2 border-transparent pb-[2px] rounded-[5%] transition-all duration-300 ease-in-out hover:border-white/80 hover:-translate-y-[2px] active:scale-[0.95] delay-60"
+          >
+            sobre mim
+          </li>
+          <li
+            class="cursor-pointer text-white/90 2xl:text-lg font-light border-b-2 border-transparent pb-[2px] rounded-[5%] transition-all duration-300 ease-in-out hover:border-white/80 hover:-translate-y-[2px] active:scale-[0.95] delay-60"
+          >
+            contato
+          </li>
+          <li
+            class="cursor-pointer text-white/90 2xl:text-lg font-light border-b-2 border-transparent pb-[2px] rounded-[5%] transition-all duration-300 ease-in-out hover:border-white/80 hover:-translate-y-[2px] active:scale-[0.95] delay-60"
+          >
+            projetos
+          </li>
+        </ul>
+      </nav>
+      <a
+        class="hidden xl:block cursor-pointer active:translate-y-[2px] active:scale-[0.95] duration-500 ease relative text-white/80"
+      >
+        <div
+          class="buuton font-light tracking-[2px] rounded-[2em] px-6 py-3 bg-white/25 backdrop-blur-[10px] scale-110 transition-all duration-200 ease-in-out hover:translate-y-[10px] hover:shadow-[-10px_0_50px_rgba(241,0,108,0.352),_10px_0_50px_rgb(85,31,200)] transition-all duration-300 ease-in-out"
+        >
+          HOVER ME
+        </div>
+        <div
+          class="back absolute inset-0 -z-10 rounded-[2em] bg-[linear-gradient(20deg,_rgb(174,6,216)_0%,_rgb(85,31,200))] shadow-[-5px_0_10px_rgb(140,12,147),_5px_0_10px_rgb(85,31,200)] translate-y-[10px]"
+        ></div>
+      </a>
+
+      <div
+        id="mobile-menu"
+        class="fixed inset-0 bg-black/80 backdrop-blur-sm hidden z-40"
+      >
+        <div
+          class="flex flex-col justify-center items-center h-full gap-8 text-white/80 text-2xl"
+        >
+          <span class="mobile-item cursor-pointer hover:text-[#d03928]"
+            >sobre mim</span
+          >
+          <span class="mobile-item cursor-pointer hover:text-[#d03928]"
+            >contato</span
+          >
+          <span class="mobile-item cursor-pointer hover:text-[#d03928]"
+            >projetos</span
+          >
+          <a
+            class="mobile-item cursor-pointer active:translate-y-[2px] active:scale-[0.95] duration-500 ease relative text-white/80 font-light"
+          >
+            <div
+              class="buuton font-light tracking-[2px] rounded-[2em] px-6 py-3 bg-white/25 backdrop-blur-[10px] scale-110 transition-all duration-200 ease-in-out hover:translate-y-[10px] hover:shadow-[-10px_0_50px_rgba(241,0,108,0.352),_10px_0_50px_rgb(85,31,200)] transition-all duration-300 ease-in-out"
+            >
+              HOVER ME
+            </div>
+            <div
+              class="back absolute inset-0 -z-10 rounded-[2em] bg-[linear-gradient(20deg,_rgb(174,6,216)_0%,_rgb(85,31,200))] shadow-[-5px_0_10px_rgb(140,12,147),_5px_0_10px_rgb(85,31,200)] translate-y-[10px]"
+            ></div>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="relative light min-h-[120vh]">
+        <div class="overlay absolute top-0 left-0 w-full h-[120vh] z-[99]"></div>
+        <div class="esq absolute w-[50%] h-[120vh] top-[0%] left-0"></div>
+        <div class="dir absolute w-[50%] h-[120vh] top-[0%] left-[50%]"></div>
+        <div class="textos absolute h-screen w-full">
+          <h1
+            class="titulo absolute w-full top-[25%] xl:top-[28%] left-1/2 -translate-x-1/2 text-5xl xl:text-9xl font-semibold text-black/80 text-center"
+          >
+            Cauê Sousa
+          </h1>
+
+          <p
+            class="subtitle absolute w-[70%] xl:w-[40%] text-center top-[45%] xl:top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-lg xl:text-3xl font-semibold text-black/80"
+          >
+            Estudante de Análise e Desenvolvimento de Sistemas pela Fatec de
+            Carapicuíba através do AMS
+          </p>
+        </div>
+      </div>
+      <section
+        class="sobreMim min-h-[100vh] px-8 py-8 2xl:py-12 2xl:px-[100px]"
+      >
+        <p class="text-white/80 font-[poppins] text-4xl 2xl:text-5xl">Links:</p>
+
+        <div
+          class="linksPai flex flex-col justify-center items-center gap-8 relative w-full mt-12"
+        >
+          <a href="https://souzzaparabolica.github.io/zypher" target="_blank"  rel="noopener noreferrer"
+            class="card flex flex-col 2xl:flex-row justify-center 2xl:justify-between items-center gap-4 w-full 2xl:w-[70%] bg-white/5 text-white/70 font-[poppins] px-8 py-4 2xl:py-8 2xl:px-[150px] rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] text-lg 2xl:text-3xl shadow-[0_0_15px_rgba(255,255,255,0.04)] hover:translate-y-[-4px] duration-300 ease"
+          >
+          <img class="rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] 2xl:w-[40%] hover:translate-y-[-2px] hover:scale-[1.05] duration-300 ease delay-50" src="Assets/Img/projects/zypher.png" alt="">
+            <p>
+              Zypher – NFT & Digital Arts
+            </p>
+          </a>
+
+          <!-- DIVISAO -->
+
+          <a href="https://souzzaparabolica.github.io/HYDRA" target="_blank"  rel="noopener noreferrer" 
+            class="card flex flex-col 2xl:flex-row justify-center 2xl:justify-between items-center gap-4 w-full 2xl:w-[70%] bg-white/5 text-white/70 font-[poppins] px-8 py-4 2xl:py-8 2xl:px-[150px] rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] text-lg 2xl:text-3xl shadow-[0_0_15px_rgba(255,255,255,0.04)] hover:translate-y-[-4px] duration-300 ease"
+          >
+          <img class="rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] 2xl:w-[40%] hover:translate-y-[-2px] hover:scale-[1.05] duration-300 ease delay-50" src="Assets/Img/projects/pagy.png" alt="">
+            <p>
+              Pagy - Virtual Reality
+            </p>
+          </a>
+
+           <!-- DIVISAO -->
+
+          <a href="https://souzzaparabolica.github.io/crypto" target="_blank"  rel="noopener noreferrer"
+            class="card flex flex-col 2xl:flex-row justify-center 2xl:justify-between items-center gap-4 w-full 2xl:w-[70%] bg-white/5 text-white/70 font-[poppins] px-8 py-4 2xl:py-8 2xl:px-[150px] rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] text-lg 2xl:text-3xl shadow-[0_0_15px_rgba(255,255,255,0.04)] hover:translate-y-[-4px] duration-300 ease"
+          >
+          <img class="rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] 2xl:w-[40%] hover:translate-y-[-2px] hover:scale-[1.05] duration-300 ease delay-50" src="Assets/Img/projects/crypto.png" alt="">
+            <p>
+              Dipoleswap - Crypto
+            </p>
+          </a>
+
+          <!-- DIVISAO -->
+
+          <a href="https://souzzaparabolica.github.io/lojavirtual" target="_blank"  rel="noopener noreferrer"
+            class="card flex flex-col 2xl:flex-row justify-center 2xl:justify-between items-center gap-4 w-full 2xl:w-[70%] bg-white/5 text-white/70 font-[poppins] px-8 py-4 2xl:py-8 2xl:px-[150px] rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] text-lg 2xl:text-3xl shadow-[0_0_15px_rgba(255,255,255,0.04)] hover:translate-y-[-4px] duration-300 ease"
+          >
+          <img class="rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] 2xl:w-[40%] hover:translate-y-[-2px] hover:scale-[1.05] duration-300 ease delay-50" src="Assets/Img/projects/lojavirtual.png" alt="">
+            <p>
+              Loja Virtual
+            </p>
+          </a>
+
+          <!-- DIVISAO -->
+
+          <a href="https://souzzaparabolica.github.io/Flux" target="_blank"  rel="noopener noreferrer"
+            class="card flex flex-col 2xl:flex-row justify-center 2xl:justify-between items-center gap-4 w-full 2xl:w-[70%] bg-white/5 text-white/70 font-[poppins] px-8 py-4 2xl:py-8 2xl:px-[150px] rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] text-lg 2xl:text-3xl shadow-[0_0_15px_rgba(255,255,255,0.04)] hover:translate-y-[-4px] duration-300 ease"
+          >
+          <img class="rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] 2xl:w-[40%] hover:translate-y-[-2px] hover:scale-[1.05] duration-300 ease delay-50" src="Assets/Img/projects/flux.png" alt="">
+            <p>
+              Flux - WebShop
+            </p>
+          </a>
+
+           <!-- DIVISAO -->
+
+          <a href="https://souzzaparabolica.github.io/Gestao-de-condominios" target="_blank"  rel="noopener noreferrer"
+            class="card flex flex-col 2xl:flex-row justify-center 2xl:justify-between items-center gap-4 w-full 2xl:w-[70%] bg-white/5 text-white/70 font-[poppins] px-8 py-4 2xl:py-8 2xl:px-[150px] rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] text-lg 2xl:text-3xl shadow-[0_0_15px_rgba(255,255,255,0.04)] hover:translate-y-[-4px] duration-300 ease"
+          >
+          <img class="rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] 2xl:w-[40%] hover:translate-y-[-2px] hover:scale-[1.05] duration-300 ease delay-50" src="Assets/Img/projects/sindicaProfissional.png" alt="">
+            <p>
+              Síndica Profissional
+            </p>
+          </a>
+
+            <!-- DIVISAO -->
+
+          <a href="https://souzzaparabolica.github.io/GTA-VI---SCROLL" target="_blank"  rel="noopener noreferrer"
+            class="card flex flex-col 2xl:flex-row justify-center 2xl:justify-between items-center gap-4 w-full 2xl:w-[70%] bg-white/5 text-white/70 font-[poppins] px-8 py-4 2xl:py-8 2xl:px-[150px] rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] text-lg 2xl:text-3xl shadow-[0_0_15px_rgba(255,255,255,0.04)] hover:translate-y-[-4px] duration-300 ease"
+          >
+          <img class="rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] 2xl:w-[40%] hover:translate-y-[-2px] hover:scale-[1.05] duration-300 ease delay-50" src="Assets/Img/projects/heroGTAVI.png" alt="">
+            <p>
+              Hero GTA VI
+            </p>
+          </a>
+
+            <!-- DIVISAO -->
+
+            <a href="https://souzzaparabolica.github.io/halloween" target="_blank"  rel="noopener noreferrer"
+              class="card flex flex-col 2xl:flex-row justify-center 2xl:justify-between items-center gap-4 w-full 2xl:w-[70%] bg-white/5 text-white/70 font-[poppins] px-8 py-4 2xl:py-8 2xl:px-[150px] rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] text-lg 2xl:text-3xl shadow-[0_0_15px_rgba(255,255,255,0.04)] hover:translate-y-[-4px] duration-300 ease"
+            >
+            <img class="rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] 2xl:w-[40%] hover:translate-y-[-2px] hover:scale-[1.05] duration-300 ease delay-50" src="Assets/Img/projects/hallowen.png" alt="">
+              <p>
+               Projeto de Halloween
+              </p>
+            </a>
+            
+            <!-- DIVISAO -->
+            
+            <a href="https://souzzaparabolica.github.io/BarDoCeara" target="_blank"  rel="noopener noreferrer"
+              class="card flex flex-col 2xl:flex-row justify-center 2xl:justify-between items-center gap-4 w-full 2xl:w-[70%] bg-white/5 text-white/70 font-[poppins] px-8 py-4 2xl:py-8 2xl:px-[150px] rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] text-lg 2xl:text-3xl shadow-[0_0_15px_rgba(255,255,255,0. hover:translate-y-[-4px] duration-300 ease04)]"
+            > 
+            <img class="rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] 2xl:w-[40%] hover:translate-y-[-2px] hover:scale-[1.05] duration-300 ease delay-50" src="Assets/Img/projects/barDoCeara.png" alt="">
+              <p>
+               Bar do Ceara
+              </p>
+            </a>
+        </div>
+      </section>
+    </main>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lenis@1.3.15/dist/lenis.min.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="animation.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
