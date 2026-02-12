@@ -4,7 +4,7 @@ const heroTimeline = gsap.timeline({
   scrollTrigger: {
     trigger: ".light",
     start: "top top", // quando o topo da seção encontrar o topo da viewport
-     end: () => "+=" + window.innerHeight * 1.8, // 2.5 telas
+     end: () => "+=" + window.innerHeight * 1.3, // 2.5 telas
     scrub: false, // animação suave
     pin: true, // fixa a seção na tela
     markers: false, // só pra debug, pode remover
@@ -42,8 +42,8 @@ gsap
   .timeline({
     scrollTrigger: {
       trigger: ".esq",
-      start: "top -160%",
-      end: "top -230%",
+      start: "top -120%",
+      end: "top -190%",
       scrub: 2,
       markers: false,
     },
@@ -75,11 +75,11 @@ gsap.to("li", {
 });
 
 gsap.to("li", {
-  color: "#ffffffe6",
+  color: "#ffffffcc",
   scrollTrigger: {
     trigger: ".esq",
-    start: "top -200%",
-    end: "top -220%",
+    start: "top -170%",
+    end: "top -180%",
     scrub: true,
     markers: false,
   },
@@ -106,8 +106,8 @@ gsap.to(".textos", {
   filter: "blur(5px)",
   scrollTrigger: {
     trigger: ".esq",
-    start: "top -170%",
-    end: "top -230%",
+    start: "top -130%",
+    end: "top -190%",
     scrub: 2,
     markers: false,
   },
