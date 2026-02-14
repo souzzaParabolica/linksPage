@@ -14,31 +14,17 @@
 
 h1,
 p,
-li, #mobile-menu, .buuton {
+li,
+#mobile-menu,
+.buuton {
   font-family: "Clash Display", sans-serif;
 }
-/* 
-.mouse {
-  width: 25px;
-  height: 40px;
-  border: 1px solid rgb(196, 196, 196);
-  background-color: transparent;
-  border-radius: 13px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+
+header {
+  background-image: linear-gradient(to bottom, black, transparent);
 }
 
 .scroll {
-  width: 3px;
-  height: 10px;
-  background-color: rgb(196, 196, 196);
-  border-radius: 2px;
-  position: absolute;
-  bottom: 9px;
   animation: move_918 1.5s linear infinite;
 }
 
@@ -54,7 +40,7 @@ li, #mobile-menu, .buuton {
   100% {
     bottom: 9px;
   }
-} */
+}
 
 .esq {
   --ang1: 0.6532950466498733deg;
@@ -67,7 +53,6 @@ li, #mobile-menu, .buuton {
     #313131 var(--ang2),
     #e9e9e9 var(--ang3)
   );
-
 }
 
 .dir {
@@ -85,6 +70,11 @@ li, #mobile-menu, .buuton {
   transform: scaleX(-1);
 }
 
-.overlay{
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.401), transparent, rgba(0, 0, 0, 0.406));
+.overlay {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.401),
+    transparent,
+    rgba(0, 0, 0, 0.406)
+  );
 }

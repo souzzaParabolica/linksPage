@@ -57,50 +57,52 @@
   </head>
   <body class="bg-[#151515]">
     <header
-      class="fixed flex justify-between items-center z-10 2xl:px-[100px] px-8 py-8 2xl:py-12 w-full"
+      class="fixed flex justify-between items-center z-10 xl:px-[100px] px-8 py-8 xl:py-12 w-full"
     >
       <img
-        class="w-[15%] 2xl:w-[5%]"
+        class="w-[15%] xl:w-[5%]"
         src="Assets/Img/скрипт-removebg-preview.png"
         alt=""
       />
       <button
         id="menu-btn"
-        class="xl:hidden absolute right-6 top-8 z-50 text-black"
+        class="xl:hidden absolute right-6 top-8 z-50 text-black/90"
       >
-        <span data-lucide="menu" class="w-8 h-8 text-black block"></span>
+        <span data-lucide="menu" class="w-8 h-8 text-[#9e9e9e] block"></span>
       </button>
       <nav class="hidden xl:flex justify-center items-center">
         <ul class="flex justify-center items-center gap-12">
           <li
-            class="cursor-pointer text-white/80 2xl:text-2xl font-medium font-light border-b-2 border-transparent pb-[2px] rounded-[5%] transition-all duration-300 ease-in-out hover:border-white/80 hover:-translate-y-[2px] active:scale-[0.95] delay-60"
+            class="cursor-pointer text-white/80 xl:text-2xl font-medium font-light border-b-2 border-transparent pb-[2px] rounded-[5%] transition-all duration-300 ease-in-out hover:border-white/80 hover:-translate-y-[2px] active:scale-[0.95] delay-60"
           >
             sobre mim
           </li>
           <li
-            class="cursor-pointer text-white/80 2xl:text-2xl font-medium font-light border-b-2 border-transparent pb-[2px] rounded-[5%] transition-all duration-300 ease-in-out hover:border-white/80 hover:-translate-y-[2px] active:scale-[0.95] delay-60"
+            class="cursor-pointer text-white/80 xl:text-2xl font-medium font-light border-b-2 border-transparent pb-[2px] rounded-[5%] transition-all duration-300 ease-in-out hover:border-white/80 hover:-translate-y-[2px] active:scale-[0.95] delay-60"
           >
             contato
           </li>
           <li
-            class="cursor-pointer text-white/80 2xl:text-2xl font-medium font-light border-b-2 border-transparent pb-[2px] rounded-[5%] transition-all duration-300 ease-in-out hover:border-white/80 hover:-translate-y-[2px] active:scale-[0.95] delay-60"
+            class="cursor-pointer text-white/80 xl:text-2xl font-medium font-light border-b-2 border-transparent pb-[2px] rounded-[5%] transition-all duration-300 ease-in-out hover:border-white/80 hover:-translate-y-[2px] active:scale-[0.95] delay-60"
           >
             projetos
           </li>
         </ul>
       </nav>
-      <a
-        class="hidden xl:block cursor-pointer active:translate-y-[2px] active:scale-[0.95] duration-500 ease relative text-white/80"
-      >
-        <div
-          class="buuton font-light tracking-[2px] rounded-[2em] px-6 py-3 bg-white/25 backdrop-blur-[10px] scale-110 transition-all duration-200 ease-in-out hover:translate-y-[10px] hover:shadow-[-10px_0_50px_rgba(241,0,108,0.352),_10px_0_50px_rgb(85,31,200)] transition-all duration-300 ease-in-out"
+      <div class="button-anim-wrapper">
+        <a
+          class="hidden xl:block cursor-pointer active:translate-y-[2px] active:scale-[0.95] duration-500 ease relative text-white/80"
         >
-          HOVER ME
-        </div>
-        <div
-          class="back absolute inset-0 -z-10 rounded-[2em] bg-[linear-gradient(20deg,_rgb(174,6,216)_0%,_rgb(85,31,200))] shadow-[-5px_0_10px_rgb(140,12,147),_5px_0_10px_rgb(85,31,200)] translate-y-[10px]"
-        ></div>
-      </a>
+          <div
+            class="buuton font-light tracking-[2px] rounded-[2em] px-6 py-3 bg-white/25 backdrop-blur-[10px] scale-110 transition-all duration-200 ease-in-out hover:translate-y-[10px] hover:shadow-[-10px_0_50px_rgba(241,0,108,0.352),_10px_0_50px_rgb(85,31,200)] transition-all duration-300 ease-in-out"
+          >
+            FALE COMIGO
+          </div>
+          <div
+            class="back absolute inset-0 -z-10 rounded-[2em] bg-[linear-gradient(20deg,_rgb(174,6,216)_0%,_rgb(85,31,200))] shadow-[-5px_0_10px_rgb(140,12,147),_5px_0_10px_rgb(85,31,200)] translate-y-[10px]"
+          ></div>
+        </a>
+      </div>
 
       <div
         id="mobile-menu"
@@ -121,11 +123,11 @@
           <a
             class="mobile-item cursor-pointer active:translate-y-[2px] active:scale-[0.95] duration-500 ease relative text-white/80 font-light"
           >
-            <div
-              class="buuton font-light tracking-[2px] rounded-[2em] px-6 py-3 bg-white/25 backdrop-blur-[10px] scale-110 transition-all duration-200 ease-in-out hover:translate-y-[10px] hover:shadow-[-10px_0_50px_rgba(241,0,108,0.352),_10px_0_50px_rgb(85,31,200)] transition-all duration-300 ease-in-out"
+            <button
+              class="buuton text-sm font-light tracking-[2px] rounded-[2em] px-6 py-3 bg-white/25 backdrop-blur-[10px] scale-110 transition-all duration-200 ease-in-out hover:translate-y-[10px] hover:shadow-[-10px_0_50px_rgba(241,0,108,0.352),_10px_0_50px_rgb(85,31,200)] transition-all duration-300 ease-in-out"
             >
-              HOVER ME
-            </div>
+              FALE COMIGO
+            </button>
             <div
               class="back absolute inset-0 -z-10 rounded-[2em] bg-[linear-gradient(20deg,_rgb(174,6,216)_0%,_rgb(85,31,200))] shadow-[-5px_0_10px_rgb(140,12,147),_5px_0_10px_rgb(85,31,200)] translate-y-[10px]"
             ></div>
@@ -134,132 +136,206 @@
       </div>
     </header>
     <main>
-      <div class="relative light min-h-[120vh]">
-        <div class="overlay absolute top-0 left-0 w-full h-[120vh] z-[99]"></div>
-        <div class="esq absolute w-[50%] h-[120vh] top-[0%] left-0"></div>
-        <div class="dir absolute w-[50%] h-[120vh] top-[0%] left-[50%]"></div>
+      <div class="relative light min-h-[120vh] xl:min-h-[140vh]">
+        <div
+          class="overlay absolute top-0 left-0 w-full h-[120vh] xl:h-[140vh] 2xl:h-[120vh] z-[99]"
+        ></div>
+        <div
+          class="esq absolute w-[50%] h-[120vh] xl:h-[140vh] 2xl:h-[120vh] top-[0%] left-0"
+        ></div>
+        <div
+          class="dir absolute w-[50%] h-[120vh] xl:h-[140vh] 2xl:h-[120vh] top-[0%] left-[50%]"
+        ></div>
         <div class="textos absolute h-screen w-full">
           <h1
-            class="titulo absolute w-full top-[25%] xl:top-[28%] left-1/2 -translate-x-1/2 text-5xl xl:text-9xl font-semibold text-black/80 text-center"
+            class="titulo absolute w-full top-[30%] xl:top-[25%] 2xl:top-[28%] left-1/2 -translate-x-1/2 text-5xl xl:text-9xl font-semibold text-black/80 text-center"
           >
             Cauê Sousa
           </h1>
 
           <p
-            class="subtitle absolute w-[70%] xl:w-[40%] text-center top-[45%] xl:top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-lg xl:text-3xl font-semibold text-black/80"
+            class="subtitle absolute w-[85%] xl:w-[55%] 2xl:w-[40%] text-center top-[47%] xl:top-[56%] 2xl:top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-lg xl:text-3xl font-semibold text-black/80"
           >
             Estudante de Análise e Desenvolvimento de Sistemas pela Fatec de
             Carapicuíba através do AMS
           </p>
         </div>
+        <div
+          class="mouse absolute top-[65%] xl:top-[60%] 2xl:top-[55%] left-1/2 -translate-x-1/2 w-[20px] h-[30px] xl:w-[25px] xl:h-[40px] border border-[rgb(196,196,196)] bg-transparent rounded-[13px] rounded-bl-[20px] rounded-br-[20px] flex items-center justify-center"
+        >
+          <div
+            class="scroll w-[2px] h-[8px] xl:w-[3px] xl:h-[10px] bg-[rgb(196,196,196)] rounded-[2px] absolute bottom-[9px]"
+          ></div>
+        </div>
       </div>
       <section
-        class="sobreMim min-h-[100vh] px-8 py-8 2xl:py-12 2xl:px-[100px]"
+        class="sobreMim min-h-[100vh] px-8 xl:px-[100px] flex flex-col justify-center"
       >
-        <p class="text-white/80 font-[poppins] text-4xl 2xl:text-5xl">Projetos:</p>
+        <p
+          class="projetosTitulo text-white/80 font-[poppins] text-4xl 2xl:text-5xl font-semibold mt-[60px]"
+        >
+          PROJETOS:
+        </p>
 
         <div
-          class="linksPai flex flex-col justify-center items-center gap-8 relative w-full mt-12"
+          class="horizontal-container w-full overflow-hidden mt-12 rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px]"
         >
-          <a href="https://souzzaparabolica.github.io/zypher" target="_blank"  rel="noopener noreferrer"
-            class="card flex flex-col 2xl:flex-row justify-center 2xl:justify-between items-center gap-4 w-full 2xl:w-[70%] bg-white/5 text-white/70 font-[poppins] px-8 py-4 2xl:py-8 2xl:px-[150px] rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] text-lg 2xl:text-3xl shadow-[0_0_15px_rgba(255,255,255,0.04)] hover:translate-y-[-4px] duration-300 ease"
-          >
-          <img class="rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] 2xl:w-[40%] hover:translate-y-[-2px] hover:scale-[1.05] duration-300 ease delay-50" src="Assets/Img/projects/zypher.png" alt="">
-            <p>
-              Zypher – NFT & Digital Arts
-            </p>
-          </a>
-
-          <!-- DIVISAO -->
-
-          <a href="https://souzzaparabolica.github.io/HYDRA" target="_blank"  rel="noopener noreferrer" 
-            class="card flex flex-col 2xl:flex-row justify-center 2xl:justify-between items-center gap-4 w-full 2xl:w-[70%] bg-white/5 text-white/70 font-[poppins] px-8 py-4 2xl:py-8 2xl:px-[150px] rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] text-lg 2xl:text-3xl shadow-[0_0_15px_rgba(255,255,255,0.04)] hover:translate-y-[-4px] duration-300 ease"
-          >
-          <img class="rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] 2xl:w-[40%] hover:translate-y-[-2px] hover:scale-[1.05] duration-300 ease delay-50" src="Assets/Img/projects/pagy.png" alt="">
-            <p>
-              Pagy - Virtual Reality
-            </p>
-          </a>
-
-           <!-- DIVISAO -->
-
-          <a href="https://souzzaparabolica.github.io/crypto" target="_blank"  rel="noopener noreferrer"
-            class="card flex flex-col 2xl:flex-row justify-center 2xl:justify-between items-center gap-4 w-full 2xl:w-[70%] bg-white/5 text-white/70 font-[poppins] px-8 py-4 2xl:py-8 2xl:px-[150px] rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] text-lg 2xl:text-3xl shadow-[0_0_15px_rgba(255,255,255,0.04)] hover:translate-y-[-4px] duration-300 ease"
-          >
-          <img class="rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] 2xl:w-[40%] hover:translate-y-[-2px] hover:scale-[1.05] duration-300 ease delay-50" src="Assets/Img/projects/crypto.png" alt="">
-            <p>
-              Dipoleswap - Crypto
-            </p>
-          </a>
-
-          <!-- DIVISAO -->
-
-          <a href="https://souzzaparabolica.github.io/lojavirtual" target="_blank"  rel="noopener noreferrer"
-            class="card flex flex-col 2xl:flex-row justify-center 2xl:justify-between items-center gap-4 w-full 2xl:w-[70%] bg-white/5 text-white/70 font-[poppins] px-8 py-4 2xl:py-8 2xl:px-[150px] rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] text-lg 2xl:text-3xl shadow-[0_0_15px_rgba(255,255,255,0.04)] hover:translate-y-[-4px] duration-300 ease"
-          >
-          <img class="rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] 2xl:w-[40%] hover:translate-y-[-2px] hover:scale-[1.05] duration-300 ease delay-50" src="Assets/Img/projects/lojavirtual.png" alt="">
-            <p>
-              Loja Virtual
-            </p>
-          </a>
-
-          <!-- DIVISAO -->
-
-          <a href="https://souzzaparabolica.github.io/Flux" target="_blank"  rel="noopener noreferrer"
-            class="card flex flex-col 2xl:flex-row justify-center 2xl:justify-between items-center gap-4 w-full 2xl:w-[70%] bg-white/5 text-white/70 font-[poppins] px-8 py-4 2xl:py-8 2xl:px-[150px] rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] text-lg 2xl:text-3xl shadow-[0_0_15px_rgba(255,255,255,0.04)] hover:translate-y-[-4px] duration-300 ease"
-          >
-          <img class="rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] 2xl:w-[40%] hover:translate-y-[-2px] hover:scale-[1.05] duration-300 ease delay-50" src="Assets/Img/projects/flux.png" alt="">
-            <p>
-              Flux - WebShop
-            </p>
-          </a>
-
-           <!-- DIVISAO -->
-
-          <a href="https://souzzaparabolica.github.io/Gestao-de-condominios" target="_blank"  rel="noopener noreferrer"
-            class="card flex flex-col 2xl:flex-row justify-center 2xl:justify-between items-center gap-4 w-full 2xl:w-[70%] bg-white/5 text-white/70 font-[poppins] px-8 py-4 2xl:py-8 2xl:px-[150px] rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] text-lg 2xl:text-3xl shadow-[0_0_15px_rgba(255,255,255,0.04)] hover:translate-y-[-4px] duration-300 ease"
-          >
-          <img class="rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] 2xl:w-[40%] hover:translate-y-[-2px] hover:scale-[1.05] duration-300 ease delay-50" src="Assets/Img/projects/sindicaProfissional.png" alt="">
-            <p>
-              Síndica Profissional
-            </p>
-          </a>
-
-            <!-- DIVISAO -->
-
-          <a href="https://souzzaparabolica.github.io/GTA-VI---SCROLL" target="_blank"  rel="noopener noreferrer"
-            class="card flex flex-col 2xl:flex-row justify-center 2xl:justify-between items-center gap-4 w-full 2xl:w-[70%] bg-white/5 text-white/70 font-[poppins] px-8 py-4 2xl:py-8 2xl:px-[150px] rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] text-lg 2xl:text-3xl shadow-[0_0_15px_rgba(255,255,255,0.04)] hover:translate-y-[-4px] duration-300 ease"
-          >
-          <img class="rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] 2xl:w-[40%] hover:translate-y-[-2px] hover:scale-[1.05] duration-300 ease delay-50" src="Assets/Img/projects/heroGTAVI.png" alt="">
-            <p>
-              Hero GTA VI
-            </p>
-          </a>
-
-            <!-- DIVISAO -->
-
-            <a href="https://souzzaparabolica.github.io/halloween" target="_blank"  rel="noopener noreferrer"
-              class="card flex flex-col 2xl:flex-row justify-center 2xl:justify-between items-center gap-4 w-full 2xl:w-[70%] bg-white/5 text-white/70 font-[poppins] px-8 py-4 2xl:py-8 2xl:px-[150px] rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] text-lg 2xl:text-3xl shadow-[0_0_15px_rgba(255,255,255,0.04)] hover:translate-y-[-4px] duration-300 ease"
+          <div class="linksPai flex gap-12 relative w-max">
+            <a
+              href="https://souzzaparabolica.github.io/zypher"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="card gap-4 w-[310px] xl:w-[600px] 2xl:w-[800px] bg-white/5 text-white/70 font-[poppins] rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] text-lg xl:text-3xl shadow-[0_0_15px_rgba(255,255,255,0.04)]"
             >
-            <img class="rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] 2xl:w-[40%] hover:translate-y-[-2px] hover:scale-[1.05] duration-300 ease delay-50" src="Assets/Img/projects/hallowen.png" alt="">
-              <p>
-               Projeto de Halloween
-              </p>
+              <img
+                class="rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] w-[100%]"
+                src="Assets/Img/projects/zypher.png"
+                alt=""
+              />
             </a>
-            
+
             <!-- DIVISAO -->
-            
-            <a href="https://souzzaparabolica.github.io/BarDoCeara" target="_blank"  rel="noopener noreferrer"
-              class="card flex flex-col 2xl:flex-row justify-center 2xl:justify-between items-center gap-4 w-full 2xl:w-[70%] bg-white/5 text-white/70 font-[poppins] px-8 py-4 2xl:py-8 2xl:px-[150px] rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] text-lg 2xl:text-3xl shadow-[0_0_15px_rgba(255,255,255,0. hover:translate-y-[-4px] duration-300 ease04)]"
-            > 
-            <img class="rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] 2xl:w-[40%] hover:translate-y-[-2px] hover:scale-[1.05] duration-300 ease delay-50" src="Assets/Img/projects/barDoCeara.png" alt="">
-              <p>
-               Bar do Ceara
-              </p>
+
+            <a
+              href="https://souzzaparabolica.github.io/HYDRA"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="card w-[310px] xl:w-[600px] 2xl:w-[800px] gap-4 bg-white/5 text-white/70 font-[poppins] rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] text-lg xl:text-3xl shadow-[0_0_15px_rgba(255,255,255,0.04)]"
+            >
+              <img
+                class="rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] w-[100%]"
+                src="Assets/Img/projects/pagy.png"
+                alt=""
+              />
             </a>
+
+            <!-- DIVISAO -->
+
+            <a
+              href="https://souzzaparabolica.github.io/crypto"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="card gap-4 w-[310px] xl:w-[600px] 2xl:w-[800px] bg-white/5 text-white/70 font-[poppins] rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] text-lg xl:text-3xl shadow-[0_0_15px_rgba(255,255,255,0.04)]"
+            >
+              <img
+                class="rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] w-[100%]"
+                src="Assets/Img/projects/crypto.png"
+                alt=""
+              />
+            </a>
+
+            <!-- DIVISAO -->
+
+            <a
+              href="https://souzzaparabolica.github.io/lojavirtual"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="card gap-4 w-[310px] xl:w-[600px] 2xl:w-[800px] bg-white/5 text-white/70 font-[poppins] rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] text-lg xl:text-3xl shadow-[0_0_15px_rgba(255,255,255,0.04)]"
+            >
+              <img
+                class="rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] w-[100%]"
+                src="Assets/Img/projects/lojavirtual.png"
+                alt=""
+              />
+            </a>
+
+            <!-- DIVISAO -->
+
+            <a
+              href="https://souzzaparabolica.github.io/Flux"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="card gap-4 w-[310px] xl:w-[600px] 2xl:w-[800px] bg-white/5 text-white/70 font-[poppins] rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] text-lg xl:text-3xl shadow-[0_0_15px_rgba(255,255,255,0.04)]"
+            >
+              <img
+                class="rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] w-[100%]"
+                src="Assets/Img/projects/flux.png"
+                alt=""
+              />
+            </a>
+
+            <!-- DIVISAO -->
+
+            <a
+              href="https://souzzaparabolica.github.io/Gestao-de-condominios"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="card gap-4 w-[310px] xl:w-[600px] 2xl:w-[800px] bg-white/5 text-white/70 font-[poppins] rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] text-lg xl:text-3xl shadow-[0_0_15px_rgba(255,255,255,0.04)]"
+            >
+              <img
+                class="rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] w-[100%]"
+                src="Assets/Img/projects/sindicaProfissional.png"
+                alt=""
+              />
+            </a>
+
+            <!-- DIVISAO -->
+
+            <a
+              href="https://souzzaparabolica.github.io/GTA-VI---SCROLL"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="card gap-4 w-[310px] xl:w-[600px] 2xl:w-[800px] bg-white/5 text-white/70 font-[poppins] rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] text-lg xl:text-3xl shadow-[0_0_15px_rgba(255,255,255,0.04)]"
+            >
+              <img
+                class="rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] w-[100%]"
+                src="Assets/Img/projects/heroGTAVI.png"
+                alt=""
+              />
+            </a>
+
+            <!-- DIVISAO -->
+
+            <a
+              href="https://souzzaparabolica.github.io/halloween"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="card gap-4 w-[310px] xl:w-[600px] 2xl:w-[800px] bg-white/5 text-white/70 font-[poppins] rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] text-lg xl:text-3xl shadow-[0_0_15px_rgba(255,255,255,0.04)]"
+            >
+              <img
+                class="rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] w-[100%]"
+                src="Assets/Img/projects/hallowen.png"
+                alt=""
+              />
+            </a>
+
+            <!-- DIVISAO -->
+
+            <a
+              href="https://souzzaparabolica.github.io/BarDoCeara"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="card gap-4 w-[310px] xl:w-[600px] 2xl:w-[800px] bg-white/5 text-white/70 font-[poppins] rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] text-lg xl:text-3xl shadow-[0_0_15px_rgba(255,255,255,0.04)]"
+            >
+              <img
+                class="rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px] w-[100%]"
+                src="Assets/Img/projects/barDoCeara.png"
+                alt=""
+              />
+            </a>
+          </div>
         </div>
       </section>
     </main>
+    <button
+      id="back-to-top"
+      class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full backdrop-blur-md bg-white/10 border border-white/20 shadow-lg flex items-center justify-center transition-all duration-300 opacity-0 scale-90"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6 text-white"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 15l7-7 7 7"
+        />
+      </svg>
+    </button>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://unpkg.com/lenis@1.3.15/dist/lenis.min.js"></script>
     <script>
