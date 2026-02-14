@@ -49,8 +49,9 @@
     <!-- GSAP Core -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
-    <!-- GSAP ScrollTrigger Plugin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
 
     <link rel="stylesheet" href="style.css" />
     <title>Página de Links</title>
@@ -167,8 +168,113 @@
             class="scroll w-[2px] h-[8px] xl:w-[3px] xl:h-[10px] bg-[rgb(196,196,196)] rounded-[2px] absolute bottom-[9px]"
           ></div>
         </div>
+        <button
+          data-target="#projetos"
+          class="button hidden xl:grid absolute top-[60%] right-[100px] cursor-pointer border-none bg-[#7808d0] text-white w-[80px] h-[80px] xl:w-[100px] xl:h-[100px] rounded-full overflow-hidden place-content-center transition-[background,transform] duration-300 font-light z-[99] font-['Clash_Display',sans-serif]"
+        >
+          <p
+            class="button__text absolute inset-0 animate-[text-rotation_8s_linear_infinite]"
+          >
+            <span
+              class="absolute inset-[-2px] xl:inset-[4px] [transform:rotate(calc(25deg*var(--index)))]"
+              style="--index: 0"
+              >R</span
+            >
+            <span
+              class="absolute inset-[-2px] xl:inset-[4px] [transform:rotate(calc(25deg*var(--index)))]"
+              style="--index: 1"
+              >O</span
+            >
+            <span
+              class="absolute inset-[-2px] xl:inset-[4px] [transform:rotate(calc(25deg*var(--index)))]"
+              style="--index: 2"
+              >L</span
+            >
+            <span
+              class="absolute inset-[-2px] xl:inset-[4px] [transform:rotate(calc(25deg*var(--index)))]"
+              style="--index: 3"
+              >E</span
+            >
+            <span
+              class="absolute inset-[-2px] xl:inset-[4px] [transform:rotate(calc(25deg*var(--index)))]"
+              style="--index: 4"
+            >
+            </span>
+            <span
+              class="absolute inset-[-2px] xl:inset-[4px] [transform:rotate(calc(25deg*var(--index)))]"
+              style="--index: 5"
+              >A</span
+            >
+            <span
+              class="absolute inset-[-2px] xl:inset-[4px] [transform:rotate(calc(25deg*var(--index)))]"
+              style="--index: 6"
+            >
+            </span>
+            <span
+              class="absolute inset-[-2px] xl:inset-[4px] [transform:rotate(calc(25deg*var(--index)))]"
+              style="--index: 7"
+              >P</span
+            >
+            <span
+              class="absolute inset-[-2px] xl:inset-[4px] [transform:rotate(calc(25deg*var(--index)))]"
+              style="--index: 8"
+              >A</span
+            >
+            <span
+              class="absolute inset-[-2px] xl:inset-[4px] [transform:rotate(calc(25deg*var(--index)))]"
+              style="--index: 9"
+              >G</span
+            >
+            <span
+              class="absolute inset-[-2px] xl:inset-[4px] [transform:rotate(calc(25deg*var(--index)))]"
+              style="--index: 10"
+              >I</span
+            >
+            <span
+              class="absolute inset-[-2px] xl:inset-[4px] [transform:rotate(calc(25deg*var(--index)))]"
+              style="--index: 11"
+              >N</span
+            >
+            <span
+              class="absolute inset-[-2px] xl:inset-[4px] [transform:rotate(calc(25deg*var(--index)))]"
+              style="--index: 12"
+              >A</span
+            >
+          </p>
+
+          <div
+            class="button__circle relative w-[40px] h-[40px] overflow-hidden bg-white text-[#7808d0] rounded-full flex items-center justify-center"
+          >
+            <svg
+              viewBox="0 0 14 15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="button__icon"
+              width="14"
+            >
+              <path
+                d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                fill="currentColor"
+              ></path>
+            </svg>
+
+            <svg
+              viewBox="0 0 14 15"
+              fill="none"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+              class="button__icon button__icon--copy"
+            >
+              <path
+                d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </div>
+        </button>
       </div>
       <section
+        id="projetos"
         class="sobreMim min-h-[100vh] px-8 xl:px-[100px] flex flex-col justify-center"
       >
         <p

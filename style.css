@@ -12,7 +12,8 @@
   font-style: normal;
 }
 
-.textos h1, .textos p{
+.textos h1,
+.textos p {
   opacity: 0;
 }
 
@@ -81,4 +82,38 @@ header {
     transparent,
     rgba(0, 0, 0, 0.406)
   );
+}
+.button__icon,
+.button__icon--copy {
+  transform: rotate(90deg);
+}
+
+.button__icon--copy {
+  position: absolute;
+  transform: rotate(90deg) translate(-150%, 200%);
+}
+
+.button:hover {
+  background: #000;
+  transform: scale(1.05);
+}
+
+.button:hover .button__icon {
+  color: #000;
+}
+
+.button:hover .button__icon:first-child {
+  transition: transform 0.3s ease-in-out;
+  transform: rotate(90deg)translate(150%, -150%);
+}
+
+.button:hover .button__icon--copy {
+  transition: transform 0.3s ease-in-out 0.1s;
+  transform: rotate(90deg) translate(0);
+}
+
+@keyframes text-rotation {
+  to {
+    rotate: 360deg;
+  }
 }

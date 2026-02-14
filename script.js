@@ -1,10 +1,11 @@
 // Initialize Lenis
+
 const lenis = new Lenis({
   autoRaf: true,
 });
 
 // Listen for the scroll event and log the event data
-lenis.on('scroll', (e) => {
+lenis.on("scroll", (e) => {
   console.log(e);
 });
 
@@ -96,3 +97,24 @@ menuBtn.addEventListener("click", () => {
 
 // Fecha ao clicar em qualquer item
 mobileMenu.addEventListener("click", closeMenu);
+gsap.registerPlugin(ScrollToPlugin);
+
+document.querySelectorAll(".button").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    
+    const targetSelector = btn.dataset.target;
+    const target = document.querySelector(targetSelector);
+
+    if (!target) return;
+
+    gsap.to(window, {
+      scrollTo: {
+        y: target,
+        offsetY: 0
+      },
+      duration: 1.2,
+      ease: "power3.inOut"
+    });
+
+  });
+});
