@@ -11,25 +11,50 @@ const heroTimeline = gsap.timeline({
   },
 });
 
-let container = document.querySelector(".horizontal-container");
-let track = document.querySelector(".linksPai");
+// let container = document.querySelector(".horizontal-container");
+// let track = document.querySelector(".linksPai");
 
-let scrollAmount = track.scrollWidth - container.offsetWidth;
+// let scrollAmount = track.scrollWidth - container.offsetWidth;
 
-gsap.to(track, {
-  x: -scrollAmount,
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".sobreMim",
-    start: "top top",
-    end: () => "+=" + scrollAmount,
-    scrub: 1.5,
-    pin: true,
-    anticipatePin: 1,
-    invalidateOnRefresh: true,
-  },
-});
+// gsap.to(track, {
+//   x: -scrollAmount,
+//   ease: "none",
+//   scrollTrigger: {
+//     trigger: ".sobreMim",
+//     start: "top top",
+//     end: () => "+=" + scrollAmount,
+//     scrub: 1.5,
+//     pin: true,
+//     anticipatePin: 1,
+//     invalidateOnRefresh: true,
+//   },
+// });
 let mm = gsap.matchMedia();
+mm.add("(min-width: 1280px)", () => {
+  const container = document.querySelector(".horizontal-container");
+  const track = document.querySelector(".linksPai");
+
+  const scrollAmount = track.scrollWidth - container.offsetWidth;
+
+  const tl = gsap.to(track, {
+    x: -scrollAmount,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".sobreMim",
+      start: "top top",
+      end: () => "+=" + scrollAmount,
+      scrub: 1.5,
+      pin: true,
+      anticipatePin: 1,
+      invalidateOnRefresh: true,
+    },
+  });
+
+  return () => {
+    tl.scrollTrigger.kill();
+    tl.kill();
+  };
+});
 // TIMELINE 1: animação inicial
 mm.add("(min-width: 1367px) and (max-width: 1930px)", () => {
   const tl = gsap.timeline({
@@ -397,16 +422,18 @@ mm.add("(max-width: 768px)", () => {
     },
   });
 
-  gsap.from(".horizontal-container", {
-    opacity: 0,
-    y: 20,
-    duration: 0.8,
-    filter: "blur(5px)",
-    scrollTrigger: {
-      trigger: ".horizontal-container",
-      start: "top 55%",
-      markers: false,
-    },
+  gsap.utils.toArray(".linksPai a").forEach((a) => {
+    gsap.from(a, {
+      opacity: 0,
+      y: 20,
+      duration: 0.8,
+      filter: "blur(5px)",
+      scrollTrigger: {
+        trigger: a,
+        start: "top 55%",
+        markers: false,
+      },
+    });
   });
 });
 
