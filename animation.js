@@ -189,7 +189,7 @@ mm.add("(min-width: 1367px) and (max-width: 1930px)", () => {
       markers: false,
     },
   });
-  gsap.to(".buutton", {
+  gsap.to(".button", {
     opacity: 0,
     filter: "blur(5px)",
     y: 20,
@@ -198,7 +198,7 @@ mm.add("(min-width: 1367px) and (max-width: 1930px)", () => {
       start: "top 100%",
       end: "top 90%",
       scrub: 2,
-      markers: false,
+      markers: true,
     },
   });
 });
@@ -337,7 +337,7 @@ mm.add("(min-width: 769px) and (max-width: 1366px)", () => {
       markers: false,
     },
   });
-  gsap.to(".buutton", {
+  gsap.to(".button", {
     opacity: 0,
     filter: "blur(5px)",
     y: 20,

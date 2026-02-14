@@ -104,7 +104,7 @@ header {
 
 .button:hover .button__icon:first-child {
   transition: transform 0.3s ease-in-out;
-  transform: rotate(90deg)translate(150%, -150%);
+  transform: rotate(90deg) translate(150%, -150%);
 }
 
 .button:hover .button__icon--copy {
