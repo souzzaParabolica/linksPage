@@ -417,7 +417,7 @@ mm.add("(max-width: 768px)", () => {
     filter: "blur(5px)",
     scrollTrigger: {
       trigger: ".horizontal-container",
-      start: "top 57%",
+      start: "top 85%",
       markers: false,
     },
   });
@@ -430,7 +430,7 @@ mm.add("(max-width: 768px)", () => {
       filter: "blur(5px)",
       scrollTrigger: {
         trigger: a,
-        start: "top 55%",
+        start: "top 78%",
         markers: false,
       },
     });
