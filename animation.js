@@ -198,7 +198,7 @@ mm.add("(min-width: 1367px) and (max-width: 1930px)", () => {
       start: "top 100%",
       end: "top 90%",
       scrub: 2,
-      markers: true,
+      markers: false,
     },
   });
 });
