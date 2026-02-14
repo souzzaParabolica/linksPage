@@ -12,6 +12,10 @@
   font-style: normal;
 }
 
+.textos h1, .textos p{
+  opacity: 0;
+}
+
 h1,
 p,
 li,
