@@ -189,6 +189,18 @@ mm.add("(min-width: 1367px) and (max-width: 1930px)", () => {
       markers: false,
     },
   });
+  gsap.to(".buutton", {
+    opacity: 0,
+    filter: "blur(5px)",
+    y: 20,
+    scrollTrigger: {
+      trigger: "#projetos",
+      start: "top 100%",
+      end: "top 90%",
+      scrub: 2,
+      markers: false,
+    },
+  });
 });
 
 // TRANSIÇÃO DE MATCHMEDIA
@@ -323,6 +335,18 @@ mm.add("(min-width: 769px) and (max-width: 1366px)", () => {
       trigger: ".horizontal-container",
       start: "top 50%",
       markers: false,
+    },
+  });
+  gsap.to(".buutton", {
+    opacity: 0,
+    filter: "blur(5px)",
+    y: 20,
+    scrollTrigger: {
+      trigger: "#projetos",
+      start: "top 100%",
+      end: "top 90%",
+      scrub: 2,
+      markers: true,
     },
   });
 });
