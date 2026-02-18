@@ -64,7 +64,7 @@ mm.add("(min-width: 1367px) and (max-width: 1930px)", () => {
 
     // NAV LI - sequencial
     .fromTo(
-      "header nav li",
+      "header nav a",
       {
         opacity: 0,
         y: -15,
@@ -266,7 +266,7 @@ mm.add("(min-width: 769px) and (max-width: 1366px)", () => {
 
     // NAV LI - sequencial
     .fromTo(
-      "header nav li",
+      "header nav a",
       {
         opacity: 0,
         y: -15,
@@ -648,3 +648,15 @@ gsap.to(".textos", {
     markers: false,
   },
 });
+
+ gsap.from("footer div", {
+      y: 30,
+      opacity: 0,
+      duration: 1,
+      stagger:0.2,
+      scrollTrigger: {
+        trigger: "footer",
+        start: "top 55%",
+        markers: false,
+      },
+    });
