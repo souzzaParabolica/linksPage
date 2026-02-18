@@ -1,0 +1,30 @@
+{
+  "name": "pagina-de-links",
+  "version": "1.0.0",
+  "description": "",
+  "main": "animation.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/souzzaParabolica/linksPage.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/souzzaParabolica/linksPage/issues"
+  },
+  "homepage": "https://github.com/souzzaParabolica/linksPage#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.0",
+    "autoprefixer": "^10.4.24",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.2.0"
+  },
+  "scripts": {
+    "dev": "tailwindcss -i ./input.css -o ./dist/output.css --watch --content ./index.html"
+  }
+}

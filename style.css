@@ -1,8 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 @font-face {
   font-family: "Clash Display";
@@ -239,4 +234,34 @@ header {
 #reflectores,
 #particles {
   animation-delay: 0.4s;
+}
+
+/* Notebook pra cima */
+@media (min-width: 1024px) {
+   .maskedSection {
+    mask-image: url('Assets/Img/elipse.svg');
+    mask-position: 100% 100%;
+    mask-size: 0vw;
+    mask-repeat: no-repeat;
+
+    -webkit-mask-image: url('Assets/Img/elipse.svg');
+    -webkit-mask-position: 100% 100%;
+    -webkit-mask-size: 0vw;
+    -webkit-mask-repeat: no-repeat;
+  }
+}
+
+/* Desktop grande */
+@media (min-width: 1440px) {
+   .maskedSection {
+    mask-image: url('Assets/Img/elipse.svg');
+    mask-position: 100% 100%;
+    mask-size: 0vw;
+    mask-repeat: no-repeat;
+
+    -webkit-mask-image: url('Assets/Img/elipse.svg');
+    -webkit-mask-position: 100% 100%;
+    -webkit-mask-size: 0vw;
+    -webkit-mask-repeat: no-repeat;
+  }
 }
