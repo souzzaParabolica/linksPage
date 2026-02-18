@@ -179,6 +179,11 @@ mm.add("(min-width: 1367px) and (max-width: 1930px)", () => {
     duration: 3,
   });
 
+   sm.from(".hands", {
+    opacity: 0,
+     filter: "blur(2px)",
+  }, "-=2.9");
+
   sm.from(
     ".sobreTitulo",
     {
