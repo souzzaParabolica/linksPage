@@ -189,16 +189,7 @@ mm.add("(min-width: 1367px) and (max-width: 1930px)", () => {
     "-=2.5",
   );
 
-  sm.from(
-    ".hands, .xxx",
-    {
-      opacity: 0,
-      duration: 1,
-      filter: "blur(2px)",
-      stagger: 0.5,
-    },
-    "-=2.5",
-  );
+
 
   sm.from(
     ".content div, .content img",
