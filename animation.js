@@ -246,31 +246,6 @@ mm.add("(min-width: 1367px) and (max-width: 1930px)", () => {
       markers: false,
     },
   });
-
-  const container = document.querySelector(".horizontal-container");
-  const track = document.querySelector(".linksPai");
-
-  const scrollAmount = track.scrollWidth - container.offsetWidth;
-
-  const pj = gsap.to(track, {
-    x: -scrollAmount,
-    ease: "none",
-    scrollTrigger: {
-      trigger: ".sobreMim",
-      start: "top top",
-      end: () => "+=" + scrollAmount,
-      scrub: 1.5,
-      pin: true,
-      anticipatePin: 1,
-      invalidateOnRefresh: true,
-      markers: false,
-    },
-  });
-
-  return () => {
-    pj.scrollTrigger.kill();
-    pj.kill();
-  };
 });
 
 // TRANSIÇÃO DE MATCHMEDIA
@@ -383,15 +358,74 @@ mm.add("(min-width: 769px) and (max-width: 1366px)", () => {
       },
       0,
     ); // sincronizado
+  const sm = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".sectionMasked",
+      pin: true,
+      scrub: 2,
+      start: "top top",
+      end: () => "+=" + window.innerHeight,
+      markers: false,
+    },
+  });
 
+  sm.to(".maskedSection", {
+    maskSize: "300vw",
+    maskPosition: "50% 50%",
+    duration: 3,
+  });
+
+  sm.from(
+    ".sobreTitulo",
+    {
+      opacity: 0,
+      y: 20,
+      filter: "blur(2px)",
+    },
+    "-=2.5",
+  );
+
+  sm.from(
+    ".hands, .xxx",
+    {
+      opacity: 0,
+      duration: 1,
+      filter: "blur(2px)",
+      stagger: 0.5,
+    },
+    "-=2.5",
+  );
+
+  sm.from(
+    ".content div, .content img",
+    {
+      opacity: 0,
+      y: 10,
+      duration: 0.6,
+      filter: "blur(2px)",
+    },
+    "-=2.2",
+  );
+
+  gsap.from(".circulo", {
+    opacity: 0,
+    y: 20,
+    duration: 0.8,
+    filter: "blur(5px)",
+    scrollTrigger: {
+      trigger: ".circulo",
+      start: "top 30%",
+      markers: false,
+    },
+  });
   gsap.from(".projetosTitulo", {
     opacity: 0,
     y: 20,
     duration: 0.8,
     filter: "blur(5px)",
     scrollTrigger: {
-      trigger: ".horizontal-container",
-      start: "top 55%",
+      trigger: ".sobreMim",
+      start: "top 27%",
       markers: false,
     },
   });
@@ -402,8 +436,8 @@ mm.add("(min-width: 769px) and (max-width: 1366px)", () => {
     duration: 0.8,
     filter: "blur(5px)",
     scrollTrigger: {
-      trigger: ".horizontal-container",
-      start: "top 50%",
+      trigger: ".sobreMim",
+      start: "top 22%",
       markers: false,
     },
   });
@@ -419,12 +453,13 @@ mm.add("(min-width: 769px) and (max-width: 1366px)", () => {
       markers: false,
     },
   });
+});
+
+mm.add("(min-width: 1280px)", () => {
   const container = document.querySelector(".horizontal-container");
   const track = document.querySelector(".linksPai");
-
   const scrollAmount = track.scrollWidth - container.offsetWidth;
-
-  const pj = gsap.to(track, {
+  const tl = gsap.to(track, {
     x: -scrollAmount,
     ease: "none",
     scrollTrigger: {
@@ -438,10 +473,9 @@ mm.add("(min-width: 769px) and (max-width: 1366px)", () => {
       markers: false,
     },
   });
-
   return () => {
-    pj.scrollTrigger.kill();
-    pj.kill();
+    tl.scrollTrigger.kill();
+    tl.kill();
   };
 });
 
@@ -553,7 +587,40 @@ mm.add("(max-width: 768px)", () => {
       },
     });
   });
+
+  gsap.from('.sobreTitulo',{
+    opacity:0,
+    y:30,
+    filter:"blur(5px)",
+    scrollTrigger:{
+      trigger:".sectionMasked",
+      start:"top 50%",
+      markers:false
+    }
+  })
 });
+
+gsap.from('.content p',{
+    opacity:0,
+    y:30,
+    filter:"blur(5px)",
+    scrollTrigger:{
+      trigger:".content",
+      start:"top 50%",
+      markers:false
+    }
+  })
+
+  gsap.from('.content img',{
+    opacity:0,
+    y:30,
+    filter:"blur(5px)",
+    scrollTrigger:{
+      trigger:".content img",
+      start:"top 50%",
+      markers:false
+    }
+  })
 
 gsap.fromTo(
   ".titulo, .subtitle",

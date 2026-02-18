@@ -20,7 +20,7 @@
 h1,
 .subtitle,
 li,
-#mobile-menu,
+#mobile-menu, .texts
 .buuton {
   font-family: "Clash Display", sans-serif;
 }
@@ -116,12 +116,6 @@ header {
   to {
     rotate: 360deg;
   }
-}
-.maskedSection{
-  mask-image: url(Assets/Img/elipse.svg);
-    mask-position: 100% 100%;
-    mask-size: 0vw;
-    mask-repeat: no-repeat;
 }
 
 .hands{
