@@ -137,7 +137,7 @@
       </div>
     </header>
     <main>
-      <div class="relative light min-h-[120vh] xl:min-h-[140vh]">
+      <div class="relative light min-h-[120vh] xl:min-h-[140vh] 2xl:min-h-[120vh]">
         <div
           class="overlay absolute top-0 left-0 w-full h-[120vh] xl:h-[140vh] 2xl:h-[120vh] z-[99]"
         ></div>
@@ -274,14 +274,87 @@
         </button>
       </div>
       <section
-        id="projetos"
-        class="sobreMim min-h-[100vh] px-8 xl:px-[100px] flex flex-col justify-center"
+        class="sectionMasked relative flex justify-center items-center w-full min-h-[100vh]"
       >
-        <p
+        <div
+          class="absolute top-0 left-0 bg-[#888888] flex justify-center items-center h-full w-full relative"
+        ></div>
+
+        <!-- SEPARAÇÃO DE DIVS -->
+
+        <div
+          class="maskedSection bg-[#151515] absolute top-0 left-0 w-full h-screen flex flex-col px-8 xl:px-[100px] pt-[100px] overflow-x-hidden"
+        >
+          <img class="xxx absolute top-[58%]" src="Assets/Img/xxx.svg" alt="" />
+          <img
+            class="hands absolute w-[35%] top-[20%] right-[10%] rotate-[15deg] -scale-x-100"
+            src="Assets/Img/h1 1.svg"
+            alt=""
+          />
+
+          <h2
+            class="sobreTitulo text-white/80 font-[poppins] text-4xl 2xl:text-5xl font-semibold mt-[60px]"
+          >
+            SOBRE MIM:
+          </h2>
+
+          <div
+            class="content flex justify-evenly items-center gap-[100px] relative"
+          >
+            <div
+              class="max-w-[40%] flex flex-col justify-center items-center h-full"
+            >
+              <p
+                class="text-white/80 text-xl font-[poppins] font-light text-justify"
+              >
+                Me chamo Cauê Sousa, moro em Carapicuíba, SP, tenho 18 anos de
+                idade e sou Corinthiano. Sou técnico em Desenvolvimento de
+                Sistemas pela Etec, e atualmente estou me especializando em
+                Análise e Desenvolvimento de Sistemas pela Fatec através do
+                programa AMS - Articulação Médio Superior -.
+              </p>
+              <br />
+              <br />
+              <p
+                class="text-white/80 text-xl font-[poppins] font-light text-justify"
+              >
+                Trabalho com desenvolvimento front-end como freelancer, construo
+                websites modernos, responsivos e otimizados. Desde LandingPages
+                até sites institucionais mais completos.
+              </p>
+              <br />
+              <br />
+              <p
+                class="text-white/80 text-xl font-[poppins] font-light text-justify"
+              >
+                Como hobbies, eu curto jogar bola sempre que posssível, ouvir
+                músicas, ler livros, cozinhar, assistir a séries e filmes, jogar
+                algo, e construir designs do pinterest em códigos para aprimorar
+                minha prática, fixar conhecimento e passar o tempo.
+              </p>
+            </div>
+            <img
+              class="w-[25%] relative z-10 rounded-tl-[50px] rounded-br-[50px] rounded-tr-[10px] rounded-bl-[10px]"
+              src="Assets/Img/cachos.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+      <section
+        id="projetos"
+        class="sobreMim min-h-[100vh] px-8  px-8 xl:px-[100px] flex flex-col justify-center"
+      >
+        <img
+          class="circulo absolute w-[60%] left-1/2 -translate-x-1/2"
+          src="Assets/Img/65 1.svg"
+          alt=""
+        />
+        <h2
           class="projetosTitulo text-white/80 font-[poppins] text-4xl 2xl:text-5xl font-semibold mt-[60px]"
         >
           PROJETOS:
-        </p>
+        </h2>
 
         <div
           class="horizontal-container w-full overflow-hidden xl:overflow-hidden overflow-visible mt-12 rounded-tl-[25px] rounded-br-[25px] rounded-tr-[5px] rounded-bl-[5px]"

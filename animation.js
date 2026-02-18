@@ -11,50 +11,33 @@ const heroTimeline = gsap.timeline({
   },
 });
 
-// let container = document.querySelector(".horizontal-container");
-// let track = document.querySelector(".linksPai");
-
-// let scrollAmount = track.scrollWidth - container.offsetWidth;
-
-// gsap.to(track, {
-//   x: -scrollAmount,
-//   ease: "none",
-//   scrollTrigger: {
-//     trigger: ".sobreMim",
-//     start: "top top",
-//     end: () => "+=" + scrollAmount,
-//     scrub: 1.5,
-//     pin: true,
-//     anticipatePin: 1,
-//     invalidateOnRefresh: true,
-//   },
-// });
 let mm = gsap.matchMedia();
-mm.add("(min-width: 1280px)", () => {
-  const container = document.querySelector(".horizontal-container");
-  const track = document.querySelector(".linksPai");
 
-  const scrollAmount = track.scrollWidth - container.offsetWidth;
+//   const container = document.querySelector(".horizontal-container");
+//   const track = document.querySelector(".linksPai");
 
-  const tl = gsap.to(track, {
-    x: -scrollAmount,
-    ease: "none",
-    scrollTrigger: {
-      trigger: ".sobreMim",
-      start: "top top",
-      end: () => "+=" + scrollAmount,
-      scrub: 1.5,
-      pin: true,
-      anticipatePin: 1,
-      invalidateOnRefresh: true,
-    },
-  });
+//   const scrollAmount = track.scrollWidth - container.offsetWidth;
 
-  return () => {
-    tl.scrollTrigger.kill();
-    tl.kill();
-  };
-});
+//   const tl = gsap.to(track, {
+//     x: -scrollAmount,
+//     ease: "none",
+//     scrollTrigger: {
+//       trigger: ".sobreMim",
+//       start: "top top",
+//       end: () => "+=" + scrollAmount,
+//       scrub: 1.5,
+//       pin: true,
+//       anticipatePin: 1,
+//       invalidateOnRefresh: true,
+//       markers: false,
+//     },
+//   });
+
+//   return () => {
+//     tl.scrollTrigger.kill();
+//     tl.kill();
+//   };
+// });
 // TIMELINE 1: animação inicial
 mm.add("(min-width: 1367px) and (max-width: 1930px)", () => {
   const tl = gsap.timeline({
@@ -166,14 +149,88 @@ mm.add("(min-width: 1367px) and (max-width: 1930px)", () => {
       0,
     ); // sincronizado
 
+  gsap.to(".button", {
+    opacity: 0,
+    filter: "blur(5px)",
+    y: 20,
+    scrollTrigger: {
+      trigger: ".sectionMasked",
+      start: "top 100%",
+      end: "top 90%",
+      scrub: 2,
+      markers: false,
+    },
+  });
+
+  const sm = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".sectionMasked",
+      pin: true,
+      scrub: 2,
+      start: "top top",
+      end: () => "+=" + window.innerHeight,
+      markers: false,
+    },
+  });
+
+  sm.to(".maskedSection", {
+    maskSize: "300vw",
+    maskPosition: "50% 50%",
+    duration: 3,
+  });
+
+  sm.from(
+    ".sobreTitulo",
+    {
+      opacity: 0,
+      y: 20,
+      filter: "blur(2px)",
+    },
+    "-=2.5",
+  );
+
+  sm.from(
+    ".hands, .xxx",
+    {
+      opacity: 0,
+      duration: 1,
+      filter: "blur(2px)",
+      stagger: 0.5,
+    },
+    "-=2.5",
+  );
+
+  sm.from(
+    ".content div, .content img",
+    {
+      opacity: 0,
+      y: 10,
+      duration: 0.6,
+      filter: "blur(2px)",
+    },
+    "-=2.2",
+  );
+
+  gsap.from(".circulo", {
+    opacity: 0,
+    y: 20,
+    duration: 0.8,
+    filter: "blur(5px)",
+    scrollTrigger: {
+      trigger: ".circulo",
+      start: "top 30%",
+      markers: false,
+    },
+  });
+
   gsap.from(".projetosTitulo", {
     opacity: 0,
     y: 20,
     duration: 0.8,
     filter: "blur(5px)",
     scrollTrigger: {
-      trigger: ".horizontal-container",
-      start: "top 55%",
+      trigger: ".sobreMim",
+      start: "top 25%",
       markers: false,
     },
   });
@@ -184,23 +241,36 @@ mm.add("(min-width: 1367px) and (max-width: 1930px)", () => {
     duration: 0.8,
     filter: "blur(5px)",
     scrollTrigger: {
-      trigger: ".horizontal-container",
-      start: "top 50%",
+      trigger: ".sobreMim",
+      start: "top 20%",
       markers: false,
     },
   });
-  gsap.to(".button", {
-    opacity: 0,
-    filter: "blur(5px)",
-    y: 20,
+
+  const container = document.querySelector(".horizontal-container");
+  const track = document.querySelector(".linksPai");
+
+  const scrollAmount = track.scrollWidth - container.offsetWidth;
+
+  const pj = gsap.to(track, {
+    x: -scrollAmount,
+    ease: "none",
     scrollTrigger: {
-      trigger: "#projetos",
-      start: "top 100%",
-      end: "top 90%",
-      scrub: 2,
+      trigger: ".sobreMim",
+      start: "top top",
+      end: () => "+=" + scrollAmount,
+      scrub: 1.5,
+      pin: true,
+      anticipatePin: 1,
+      invalidateOnRefresh: true,
       markers: false,
     },
   });
+
+  return () => {
+    pj.scrollTrigger.kill();
+    pj.kill();
+  };
 });
 
 // TRANSIÇÃO DE MATCHMEDIA
@@ -342,13 +412,37 @@ mm.add("(min-width: 769px) and (max-width: 1366px)", () => {
     filter: "blur(5px)",
     y: 20,
     scrollTrigger: {
-      trigger: "#projetos",
+      trigger: ".sectionMasked",
       start: "top 100%",
       end: "top 90%",
       scrub: 2,
       markers: false,
     },
   });
+  const container = document.querySelector(".horizontal-container");
+  const track = document.querySelector(".linksPai");
+
+  const scrollAmount = track.scrollWidth - container.offsetWidth;
+
+  const pj = gsap.to(track, {
+    x: -scrollAmount,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".sobreMim",
+      start: "top top",
+      end: () => "+=" + scrollAmount,
+      scrub: 1.5,
+      pin: true,
+      anticipatePin: 1,
+      invalidateOnRefresh: true,
+      markers: false,
+    },
+  });
+
+  return () => {
+    pj.scrollTrigger.kill();
+    pj.kill();
+  };
 });
 
 // TRANSIÇÃO DE MATCHMEDIA

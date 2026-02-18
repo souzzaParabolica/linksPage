@@ -18,7 +18,7 @@
 }
 
 h1,
-p,
+.subtitle,
 li,
 #mobile-menu,
 .buuton {
@@ -116,4 +116,14 @@ header {
   to {
     rotate: 360deg;
   }
+}
+.maskedSection{
+  mask-image: url(Assets/Img/elipse.svg);
+    mask-position: 100% 100%;
+    mask-size: 0vw;
+    mask-repeat: no-repeat;
+}
+
+.hands{
+   filter: drop-shadow(0 8px 20px #222222);
 }
