@@ -101,7 +101,6 @@ gsap.registerPlugin(ScrollToPlugin);
 
 document.querySelectorAll(".button").forEach((btn) => {
   btn.addEventListener("click", () => {
-    
     const targetSelector = btn.dataset.target;
     const target = document.querySelector(targetSelector);
 
@@ -110,11 +109,10 @@ document.querySelectorAll(".button").forEach((btn) => {
     gsap.to(window, {
       scrollTo: {
         y: target,
-        offsetY: 0
+        offsetY: 0,
       },
       duration: 1.2,
-      ease: "power3.inOut"
+      ease: "power3.inOut",
     });
-
   });
 });
