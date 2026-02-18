@@ -189,8 +189,6 @@ mm.add("(min-width: 1367px) and (max-width: 1930px)", () => {
     "-=2.5",
   );
 
-
-
   sm.from(
     ".content div, .content img",
     {
@@ -579,39 +577,39 @@ mm.add("(max-width: 768px)", () => {
     });
   });
 
-  gsap.from('.sobreTitulo',{
-    opacity:0,
-    y:30,
-    filter:"blur(5px)",
-    scrollTrigger:{
-      trigger:".sectionMasked",
-      start:"top 50%",
-      markers:false
-    }
-  })
+  gsap.from(".sobreTitulo", {
+    opacity: 0,
+    y: 30,
+    filter: "blur(5px)",
+    scrollTrigger: {
+      trigger: ".sectionMasked",
+      start: "top 50%",
+      markers: false,
+    },
+  });
 });
 
-gsap.from('.content p',{
-    opacity:0,
-    y:30,
-    filter:"blur(5px)",
-    scrollTrigger:{
-      trigger:".content",
-      start:"top 50%",
-      markers:false
-    }
-  })
+gsap.from(".content p", {
+  opacity: 0,
+  y: 30,
+  filter: "blur(5px)",
+  scrollTrigger: {
+    trigger: ".content",
+    start: "top 50%",
+    markers: false,
+  },
+});
 
-  gsap.from('.content img',{
-    opacity:0,
-    y:30,
-    filter:"blur(5px)",
-    scrollTrigger:{
-      trigger:".content img",
-      start:"top 50%",
-      markers:false
-    }
-  })
+gsap.from(".content img", {
+  opacity: 0,
+  y: 30,
+  filter: "blur(5px)",
+  scrollTrigger: {
+    trigger: ".content img",
+    start: "top 50%",
+    markers: false,
+  },
+});
 
 gsap.fromTo(
   ".titulo, .subtitle",
@@ -649,14 +647,14 @@ gsap.to(".textos", {
   },
 });
 
- gsap.from("footer div", {
-      y: 30,
-      opacity: 0,
-      duration: 1,
-      stagger:0.2,
-      scrollTrigger: {
-        trigger: "footer",
-        start: "top 55%",
-        markers: false,
-      },
-    });
+gsap.from("footer div", {
+  y: 30,
+  opacity: 0,
+  duration: 1,
+  stagger: 0.2,
+  scrollTrigger: {
+    trigger: "footer",
+    start: "top 55%",
+    markers: false,
+  },
+});

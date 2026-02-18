@@ -17,14 +17,15 @@
   opacity: 0;
 }
 
-header nav a{
+header nav a {
   opacity: 0;
 }
 
 h1,
 .subtitle,
 nav a,
-#mobile-menu, .texts,
+#mobile-menu,
+.texts,
 .buuton {
   font-family: "Clash Display", sans-serif;
 }
@@ -122,16 +123,20 @@ header {
   }
 }
 
-.mascara{
-  background: radial-gradient(442.59% 148.33% at 50% 2.92%, #151515 0%, #888 100%);
+.mascara {
+  background: radial-gradient(
+    442.59% 148.33% at 50% 2.92%,
+    #151515 0%,
+    #888 100%
+  );
 }
 
-.hands{
-   filter: drop-shadow(0 8px 20px #222222);
+.hands {
+  filter: drop-shadow(0 8px 20px #222222);
 }
 
-.circulo{
-   filter: drop-shadow(0 8px 20px #000000);
+.circulo {
+  filter: drop-shadow(0 8px 20px #000000);
 }
 
 #svg-global {
