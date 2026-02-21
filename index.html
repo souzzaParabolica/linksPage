@@ -55,8 +55,7 @@
 
     <title>Página de Links</title>
   </head>
-  <body class="bg-[#151515]">
-
+  <body class="bg-[#151515] overflow-x-hidden">
     <header
       class="fixed flex justify-between items-center z-10 xl:px-[100px] px-8 py-8 xl:py-12 w-full"
     >
@@ -287,77 +286,68 @@
         </button>
       </div>
       <section
-        id="sobreMim"
-        class="sectionMasked relative flex justify-center items-center w-full min-h-[100vh] overflow-hidden"
+        class="descricao relative flex flex-col justify-center items-start w-full min-h-screen px-8 px-8 xl:px-[100px] py-12"
       >
-        <div
-          class="mascara absolute top-0 left-0 flex justify-center items-center h-[170vh] xl:h-full w-full relative"
-        ></div>
-
         <!-- SEPARAÇÃO DE DIVS -->
 
-        <div
-          class="maskedSection bg-[#151515] absolute top-0 left-0 w-full h-[170vh] xl:h-screen flex flex-col px-8 xl:px-[100px] pt-[100px] overflow-x-hidden"
+        <img
+          class="xxx hidden xl:block absolute top-[60%] left-5"
+          src="Assets/Img/xxx.webp"
+          alt=""
+        />
+        <img
+          class="hands hidden xl:block absolute w-[40%] top-[25%] right-[2%] rotate-[15deg] -scale-x-100"
+          src="Assets/Img/hands.webp"
+          alt=""
+        />
+
+        <h2
+          class="sobreTitulo text-white/80 font-[poppins] text-4xl 2xl:text-5xl font-semibold xl:mt-[60px]"
         >
-          <img
-            class="xxx hidden xl:block absolute top-[58%]"
-            src="Assets/Img/xxx.webp"
-            alt=""
-          />
-          <img
-            class="hands hidden xl:block absolute w-[35%] top-[20%] right-[10%] rotate-[15deg] -scale-x-100"
-            src="Assets/Img/hands.webp"
-            alt=""
-          />
+          SOBRE MIM:
+        </h2>
 
-          <h2
-            class="sobreTitulo text-white/80 font-[poppins] text-4xl 2xl:text-5xl font-semibold mb-[40px] xl:mt-[60px]"
-          >
-            SOBRE MIM:
-          </h2>
-
+        <div
+          class="flex flex-col xl:flex-row justify-between gap-[80px] items-center relative w-full mt-4"
+        >
           <div
-            class="content flex flex-col xl:flex-row justify-evenly items-center gap-8 xl:gap-[100px] relative overflow-hidden"
+            class="paragrafos flex flex-col justify-center items-center gap-8 xl:w-[55%]"
           >
-            <div
-              class="xl:max-w-[40%] flex flex-col justify-center gap-12 items-center overflow-hidden"
+            <p
+              class="text-white/80 text-md xl:text-lg 2xl:text-xl font-[poppins] font-light xl:text-justify"
             >
-              <p
-                class="text-white/80 text-md xl:text-xl font-[poppins] font-light xl:text-justify"
-              >
-                Me chamo Cauê Sousa, moro em Carapicuíba, SP, tenho 18 anos de
-                idade e sou Corinthiano. Sou técnico em Desenvolvimento de
-                Sistemas pela Etec, e atualmente estou me especializando em
-                Análise e Desenvolvimento de Sistemas pela Fatec através do
-                programa AMS - Articulação Médio Superior -.
-              </p>
-              <p
-                class="text-white/80 text-md xl:text-xl font-[poppins] font-light xl:text-justify"
-              >
-                Trabalho com desenvolvimento front-end como freelancer, construo
-                websites modernos, responsivos e otimizados. Desde LPs - Landing Pages -
-                até sites institucionais mais completos.
-              </p>
-              <p
-                class="text-white/80 text-md xl:text-xl font-[poppins] font-light xl:text-justify"
-              >
-                Como hobbies, eu curto jogar bola sempre que posssível, ouvir
-                músicas, ler livros, cozinhar, assistir a séries e filmes, jogar
-                algo, e construir designs do pinterest em códigos para aprimorar
-                minha prática, fixar conhecimento e passar o tempo.
-              </p>
-            </div>
-            <img
-              class="xl:w-[25%] relative xl:z-10 rounded-tl-[50px] rounded-br-[50px] rounded-tr-[10px] rounded-bl-[10px]"
-              src="Assets/Img/cachos.jpg"
-              alt=""
-            />
+              Me chamo Cauê Sousa, moro em Carapicuíba, SP, tenho 18 anos de
+              idade e sou Corinthiano. Sou técnico em Desenvolvimento de
+              Sistemas pela Etec, e atualmente estou me especializando em
+              Análise e Desenvolvimento de Sistemas pela Fatec através do
+              programa AMS - Articulação Médio Superior -.
+            </p>
+            <p
+              class="text-white/80 text-md xl:text-lg 2xl:text-xl font-[poppins] font-light xl:text-justify"
+            >
+              Trabalho com desenvolvimento front-end como freelancer, construo
+              websites modernos, responsivos e otimizados. Desde LPs - Landing
+              Pages - até sites institucionais mais completos.
+            </p>
+            <p
+              class="text-white/80 text-md xl:text-lg 2xl:text-xl font-[poppins] font-light xl:text-justify"
+            >
+              Como hobbies, eu curto jogar bola sempre que posssível, ouvir
+              músicas, ler livros, cozinhar, assistir a séries e filmes, jogar
+              algo, e construir designs do pinterest em códigos para aprimorar
+              minha prática, fixar conhecimento e passar o tempo.
+            </p>
           </div>
+          <img
+            class="fotoCaue xl:w-[30%] relative xl:z-2 rounded-tl-[50px] rounded-br-[50px] rounded-tr-[10px] rounded-bl-[10px]"
+            src="Assets/Img/cachos.jpg"
+            alt=""
+          />
         </div>
       </section>
       <section
         id="projetos"
-        class="sobreMim min-h-[100vh] px-8 px-8 xl:px-[100px] flex flex-col justify-center"
+        class="sobreMim h-auto xl:h-screen px-8 px-8 xl:px-[100px] flex flex-col justify-center"
       >
         <img
           class="circulo hidden xl:block absolute w-[60%] left-1/2 -translate-x-1/2 opacity-[0.7]"
@@ -365,7 +355,7 @@
           alt=""
         />
         <h2
-          class="projetosTitulo text-white/80 font-[poppins] text-4xl 2xl:text-5xl font-semibold mt-[60px]"
+          class="projetosTitulo text-white/80 font-[poppins] text-4xl 2xl:text-5xl font-semibold mt-[60px] xl:mt-[120px] 2xl:mt-[60px]"
         >
           PROJETOS:
         </h2>

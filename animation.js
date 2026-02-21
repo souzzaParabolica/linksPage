@@ -154,56 +154,13 @@ mm.add("(min-width: 1367px) and (max-width: 1930px)", () => {
     filter: "blur(5px)",
     y: 20,
     scrollTrigger: {
-      trigger: ".sectionMasked",
+      trigger: ".descricao",
       start: "top 100%",
       end: "top 90%",
       scrub: 2,
       markers: false,
     },
   });
-
-  const sm = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".sectionMasked",
-      pin: true,
-      scrub: 2,
-      start: "top top",
-      end: () => "+=" + window.innerHeight,
-      markers: false,
-    },
-  });
-
-  sm.to(".maskedSection", {
-    maskSize: "300vw",
-    maskPosition: "50% 50%",
-    duration: 3,
-  });
-
-   sm.from(".hands", {
-    opacity: 0,
-     filter: "blur(2px)",
-  }, "-=2.9");
-
-  sm.from(
-    ".sobreTitulo",
-    {
-      opacity: 0,
-      y: 20,
-      filter: "blur(2px)",
-    },
-    "-=2.5",
-  );
-
-  sm.from(
-    ".content div, .content img",
-    {
-      opacity: 0,
-      y: 10,
-      duration: 0.6,
-      filter: "blur(2px)",
-    },
-    "-=2.2",
-  );
 
   gsap.from(".circulo", {
     opacity: 0,
@@ -352,54 +309,6 @@ mm.add("(min-width: 769px) and (max-width: 1366px)", () => {
       },
       0,
     ); // sincronizado
-  const sm = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".sectionMasked",
-      pin: true,
-      scrub: 2,
-      start: "top top",
-      end: () => "+=" + window.innerHeight,
-      markers: false,
-    },
-  });
-
-  sm.to(".maskedSection", {
-    maskSize: "300vw",
-    maskPosition: "50% 50%",
-    duration: 3,
-  });
-
-  sm.from(
-    ".sobreTitulo",
-    {
-      opacity: 0,
-      y: 20,
-      filter: "blur(2px)",
-    },
-    "-=2.5",
-  );
-
-  sm.from(
-    ".hands, .xxx",
-    {
-      opacity: 0,
-      duration: 1,
-      filter: "blur(2px)",
-      stagger: 0.5,
-    },
-    "-=2.5",
-  );
-
-  sm.from(
-    ".content div, .content img",
-    {
-      opacity: 0,
-      y: 10,
-      duration: 0.6,
-      filter: "blur(2px)",
-    },
-    "-=2.2",
-  );
 
   gsap.from(".circulo", {
     opacity: 0,
@@ -440,10 +349,35 @@ mm.add("(min-width: 769px) and (max-width: 1366px)", () => {
     filter: "blur(5px)",
     y: 20,
     scrollTrigger: {
-      trigger: ".sectionMasked",
+      trigger: ".descricao",
       start: "top 100%",
       end: "top 90%",
       scrub: 2,
+      markers: false,
+    },
+  });
+
+  gsap.from(".descricao h2", {
+    opacity: 0,
+    x: 20,
+    duration: 1,
+    filter: "blur(2px)",
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".descricao",
+      start: "top 30%",
+      markers: false,
+    },
+  });
+  gsap.from(".descricao .paragrafos p, .descricao .fotoCaue", {
+    opacity: 0,
+    x: 20,
+    duration: 1,
+    filter: "blur(2px)",
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".descricao",
+      start: "top 15%",
       markers: false,
     },
   });
@@ -584,11 +518,26 @@ mm.add("(max-width: 768px)", () => {
 
   gsap.from(".sobreTitulo", {
     opacity: 0,
-    y: 30,
-    filter: "blur(5px)",
+    y: 20,
+    duration: 1,
+    filter: "blur(2px)",
+    stagger: 0.2,
     scrollTrigger: {
-      trigger: ".sectionMasked",
-      start: "top 50%",
+      trigger: ".descricao",
+      start: "top 40%",
+      markers: false,
+    },
+  });
+
+  gsap.from(".descricao .paragrafos p, .descricao .fotoCaue", {
+    opacity: 0,
+    x: -20,
+    duration: 1,
+    filter: "blur(2px)",
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".descricao",
+      start: "top 30%",
       markers: false,
     },
   });
