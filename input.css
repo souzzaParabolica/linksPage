@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+.test-breakpoint {
+  @apply 2xl:bg-red-500;
+}

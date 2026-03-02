@@ -197,6 +197,43 @@ mm.add("(min-width: 1367px) and (max-width: 1930px)", () => {
       markers: false,
     },
   });
+  gsap.to(".button", {
+    opacity: 0,
+    filter: "blur(5px)",
+    y: 20,
+    scrollTrigger: {
+      trigger: ".descricao",
+      start: "top 100%",
+      end: "top 90%",
+      scrub: 2,
+      markers: false,
+    },
+  });
+
+  gsap.from(".descricao h2", {
+    opacity: 0,
+    x: 20,
+    duration: 1,
+    filter: "blur(2px)",
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".descricao",
+      start: "top 30%",
+      markers: false,
+    },
+  });
+  gsap.from(".descricao .paragrafos p, .descricao .fotoCaue", {
+    opacity: 0,
+    y:15,
+    duration: 1,
+    filter: "blur(2px)",
+    stagger: 0.1,
+    scrollTrigger: {
+      trigger: ".descricao",
+      start: "top 15%",
+      markers: false,
+    },
+  });
 });
 
 // TRANSIÇÃO DE MATCHMEDIA

@@ -111,7 +111,7 @@ document.querySelectorAll(".button").forEach((btn) => {
         y: target,
         offsetY: 0,
       },
-      duration: 1.2,
+      duration: 0,
       ease: "power3.inOut",
     });
   });
