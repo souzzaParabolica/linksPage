@@ -224,7 +224,7 @@ mm.add("(min-width: 1367px) and (max-width: 1930px)", () => {
   });
   gsap.from(".descricao .paragrafos p, .descricao .fotoCaue", {
     opacity: 0,
-    y:15,
+    y: 15,
     duration: 1,
     filter: "blur(2px)",
     stagger: 0.1,
