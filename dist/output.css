@@ -269,9 +269,6 @@
   .-z-10 {
     z-index: calc(10 * -1);
   }
-  .z-9 {
-    z-index: 9;
-  }
   .z-10 {
     z-index: 10;
   }
@@ -282,9 +279,6 @@
     z-index: 50;
   }
   .z-99 {
-    z-index: 99;
-  }
-  .z-\[99\] {
     z-index: 99;
   }
   .container {
@@ -320,26 +314,11 @@
   .mt-16 {
     margin-top: calc(var(--spacing) * 16);
   }
-  .mt-\[0\.5rem\] {
-    margin-top: 0.5rem;
-  }
-  .mt-\[1rem\] {
-    margin-top: 1rem;
-  }
-  .mt-\[2rem\] {
-    margin-top: 2rem;
-  }
-  .mt-\[4rem\] {
-    margin-top: 4rem;
-  }
   .mt-\[60px\] {
     margin-top: 60px;
   }
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
-  }
-  .mb-\[2rem\] {
-    margin-bottom: 2rem;
   }
   .mb-\[50px\] {
     margin-bottom: 50px;
@@ -437,17 +416,11 @@
   .w-\[85\%\] {
     width: 85%;
   }
-  .w-\[100\%\] {
-    width: 100%;
-  }
   .w-\[310px\] {
     width: 310px;
   }
   .w-full {
     width: 100%;
-  }
-  .max-w-\[fit-content\] {
-    max-width: fit-content;
   }
   .max-w-fit {
     max-width: fit-content;
@@ -492,9 +465,6 @@
     scale: var(--tw-scale-x) var(--tw-scale-y);
   }
   .rotate-15 {
-    rotate: 15deg;
-  }
-  .rotate-\[15deg\] {
     rotate: 15deg;
   }
   .\[transform\:rotate\(calc\(25deg\*var\(--index\)\)\)\] {
@@ -572,6 +542,9 @@
   .rounded-full {
     border-radius: calc(infinity * 1px);
   }
+  .rounded-tl-\[5px\] {
+    border-top-left-radius: 5px;
+  }
   .rounded-tl-\[25px\] {
     border-top-left-radius: 25px;
   }
@@ -583,6 +556,9 @@
   }
   .rounded-tr-\[10px\] {
     border-top-right-radius: 10px;
+  }
+  .rounded-br-\[5px\] {
+    border-bottom-right-radius: 5px;
   }
   .rounded-br-\[20px\] {
     border-bottom-right-radius: 20px;
@@ -679,9 +655,6 @@
   }
   .px-8 {
     padding-inline: calc(var(--spacing) * 8);
-  }
-  .px-\[2rem\] {
-    padding-inline: 2rem;
   }
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
@@ -831,6 +804,11 @@
   .backdrop-filter {
     -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
     backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  }
+  .transition {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
   .transition-\[background\,transform\] {
     transition-property: background,transform;
@@ -1079,11 +1057,6 @@
       padding-inline: calc(var(--spacing) * 40);
     }
   }
-  .xl\:px-\[10rem\] {
-    @media (width >= 80rem) {
-      padding-inline: 10rem;
-    }
-  }
   .xl\:px-\[100px\] {
     @media (width >= 80rem) {
       padding-inline: 100px;
@@ -1097,11 +1070,6 @@
   .xl\:py-40 {
     @media (width >= 80rem) {
       padding-block: calc(var(--spacing) * 40);
-    }
-  }
-  .xl\:py-\[10rem\] {
-    @media (width >= 80rem) {
-      padding-block: 10rem;
     }
   }
   .xl\:text-justify {
